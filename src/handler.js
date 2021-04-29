@@ -76,12 +76,12 @@ const editNoteByIdHandler = (request, h) => {
 
   const note = notes.find((n) => n.id === id);
 
-  if (id) {
+  if (note) {
     note.title = title;
     note.updatedAt = new Date().toISOString();
     note.tags = tags;
     note.body = body;
-
+gi
     const response = h.response({
       status: 'suscces',
       message: 'Catatan berhasil diperbarui',
